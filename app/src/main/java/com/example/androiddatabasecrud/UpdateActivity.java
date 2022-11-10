@@ -2,6 +2,7 @@ package com.example.androiddatabasecrud;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -11,7 +12,7 @@ import android.widget.Toast;
 public class UpdateActivity extends AppCompatActivity {
 
     EditText etGedung, etRuang, etKapasitas;
-    Button updateButtonSubmit;
+    Button updateButtonSubmit, deleteButtonSubmit;
     String id, gedung, ruang, kapasitas;
 
     @Override
@@ -23,6 +24,7 @@ public class UpdateActivity extends AppCompatActivity {
         etRuang = findViewById(R.id.et_ruang2);
         etKapasitas = findViewById(R.id.et_kapasitas2);
         updateButtonSubmit = findViewById(R.id.btn_update_submit);
+        deleteButtonSubmit = findViewById(R.id.btn_delete_submit);
 
         getAndSetIntentData();
 
@@ -34,6 +36,19 @@ public class UpdateActivity extends AppCompatActivity {
                 ruang = etRuang.getText().toString().trim();
                 kapasitas = etKapasitas.getText().toString().trim();
                 myDB.updateData(id, gedung, ruang, Integer.parseInt(kapasitas));
+            }
+        });
+
+        deleteButtonSubmit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                MyDatabaseHelper myDB = new MyDatabaseHelper(UpdateActivity.this);
+                gedung = etGedung.getText().toString().trim();
+                ruang = etRuang.getText().toString().trim();
+                kapasitas = etKapasitas.getText().toString().trim();
+                myDB.deleteData(id, gedung, ruang, Integer.parseInt(kapasitas));
+
+                startActivity(new Intent(UpdateActivity.this, MainActivity.class));
             }
         });
     }
