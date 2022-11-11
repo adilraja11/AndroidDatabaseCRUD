@@ -23,3 +23,8 @@ Membuat sebuah program untuk melakukan CRUD menggunakan database lokal pada sebu
 | Gedung A          | A105         | 50              |
 | Gedung Geothermal | K101         | 100             |
 | Gedung AP         | Aula Lt. 6   | 200             |
+
+### Tampilan Aplikasi
+
+| ![Screenshot_20221111_111653](https://user-images.githubusercontent.com/70511346/201262589-d593c421-558b-4ad5-b032-4b3fe1ef487e.png) | ![Screenshot_20221111_111733](https://user-images.githubusercontent.com/70511346/201262591-8f8738ed-a9f3-4031-9761-6df33e199ed0.png) | ![Screenshot_20221111_111803](https://user-images.githubusercontent.com/70511346/201262603-b0048452-fc48-491a-84fa-e736307e9f11.png) |
+|--------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------|
