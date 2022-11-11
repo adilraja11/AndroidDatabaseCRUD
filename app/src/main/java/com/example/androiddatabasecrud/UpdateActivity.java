@@ -36,6 +36,7 @@ public class UpdateActivity extends AppCompatActivity {
                 ruang = etRuang.getText().toString().trim();
                 kapasitas = etKapasitas.getText().toString().trim();
                 myDB.updateData(id, gedung, ruang, Integer.parseInt(kapasitas));
+                startActivity(new Intent(UpdateActivity.this, MainActivity.class));
             }
         });
 
@@ -47,7 +48,6 @@ public class UpdateActivity extends AppCompatActivity {
                 ruang = etRuang.getText().toString().trim();
                 kapasitas = etKapasitas.getText().toString().trim();
                 myDB.deleteData(id, gedung, ruang, Integer.parseInt(kapasitas));
-
                 startActivity(new Intent(UpdateActivity.this, MainActivity.class));
             }
         });
